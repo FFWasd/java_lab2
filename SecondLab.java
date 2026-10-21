@@ -211,13 +211,14 @@ class Pistol{
     Pistol(int bullets){
         this.bullets = bullets;
     }
-    void shoot(){
+    @Override 
+    public String toString(){
         if (bullets>0){
-            System.out.println("Бах!");
             bullets--;
+            return "Бах!";
         }
         else{
-            System.out.println("Клац!");
+            return "Клац!";
         }
     }
 }
@@ -625,7 +626,7 @@ class Test{
                         pist = new Pistol(bul);
                     }
                     for (int i = 0; i<count; i++){
-                        pist.shoot();
+                        System.out.println(pist);;
                     }
                     scanner.nextLine();
                     break;
